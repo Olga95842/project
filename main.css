@@ -3,7 +3,8 @@ body{
   color: #fff;
   font-size: 16px;
   line-height: 1,42;
-  background: #001821;
+  background: #001821 center;
+  background: url("./image/elephant.png") center top no-repeat, url("./image/2.png") center bottom no-repeat;;;
 }
 
 a{
@@ -32,71 +33,61 @@ p{
   box-sizing: border-box;
 }
 
-.container{
+
+
+.wrapper{
   margin: 0 auto;
-  width: 1142px;
+  width: 1142px
 }
 
-.heder{
-  height: 123px;
-  position: relative;
-}
-
-.logo{
-  display: block;
-  position: absolute;
-  top: 29px;
-  left: 0px;
-}
-
-.logo__pic{
-  height: 36px;
-  width: 85px;
+.header{
+  display: flex;
+  align-items: center;
+  min-height: 123px;
+  margin-top: 26px;
+  margin-bottom: 46px;
 }
 
 .menu{
-  position: absolute;
-  top: 42px;
-  left: 115px;
+  margin-left: 79px;
 }
 
-.contacts__workhours{
-  position: absolute;
-  top: 27px;
-  right: 0;
-  font-style: normal;
-  text-align: right;
+.menu__list{
+  display: flex;
 }
 
-.menu__item{
-  display: inline-block;
-  vertical-align: middle;
-  font-size: 14px;
+.menu__item:not(:last-child){
   margin-right: 54px;
-}
-
-.menu__item:last-child{
-  margin-right: 0;
 }
 
 .menu__link{
   text-decoration: none;
+  font-size: 14px;
+}
+
+.contacts__workhours{
+  margin-left: auto;
 }
 
 .contacts__phone{
-  text-decoration: none;
   font-size: 26px;
-  margin-bottom: 4px;
+  text-decoration: none;
+  font-style: normal;
 }
 
 .workhours{
-  font-size: 13px;
   text-decoration: underline;
+  font-size: 13px;
+  text-align: right;
+  font-style: normal;
 }
 
 .header__pages{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
   width: 511px;
-  margin-top: 150px;
+  min-height: 333px;
   margin-bottom: 246px;
 }
 
@@ -104,12 +95,12 @@ p{
   font-size: 72px;
   font-weight: bold;
   line-height: 1.1;
-  margin-bottom: 26px;
+  margin-bottom: 27px;
 }
 
 .header__pages-text{
   font-size: 18px;
-  margin-bottom: 45px;
+  margin-bottom: 33px;
 }
 
 .btn{
@@ -129,7 +120,14 @@ p{
 
 .tours{
   margin-bottom: 127px;
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+}
+
+.tours__title{
+  display: flex;
+  align-items: center;
+  margin-bottom: 51px;
 }
 
 .tours__title-text{
@@ -140,29 +138,28 @@ p{
 .tours__title-icon{
   width: 21px;
   height: 28px;
+  margin-left: 12px;
 }
 
-.tours__title{
-  margin-bottom: 51px;
+.tours__list{
+  display: flex;
 }
 
 .tour__item{
   min-height: 449px;
   background: #fff;
   border-radius: 0px, 0px, 5px, 5px;
-  display: inline-block;
-  margin-right: 23px;
-  width: 362px;
+  min-width: 362px;
   color: #000;
 }
 
-.tour__item:last-child{
-  margin-right: 0;
+.tour__item:not(:last-child){
+  margin-right: 27px;
 }
 
 .tour__image{
   min-height: 144px;
-  margin-bottom: 33px;
+  margin-bottom: 5px;
 }
 
 .tour__content{
@@ -175,41 +172,46 @@ p{
   margin-bottom: 21px;
 }
 
-.tour__deskription-cell{
-  display: inline-block;
-  vertical-align: top;
-  margin-right: 28px;
+.tour__description__sec{
+ display: flex;
+ margin-right: 28px;
+}
+
+.tour__description__sec-cell{
+  display: flex;
   color: #666;
   font-size: 16px;
+  margin-bottom: 23px;
 }
 
-.tour__deskription-cell:last-child{
-  margin-right: 0;
+.tour__description__sec-cell:not(:last-child){
+  margin-right: 28px;
 }
 
-.tour__deskription-icon{
+.tour__description__sec-icon{
   margin-right: 10px;
 }
 
-.tour__deskription{
-  margin-bottom: 23.5px;
-}
-
-.tour__content-text{
+.tour__description-text{
   font-size: 14px;
   color:  #303030;
-  margin-bottom: 24.5px;
+  margin-bottom: 40px;
 }
 
-.btn--color--wihte{
+.btn--color--white{
   background: #fff;
   color: #F5170E;
   border: 1px solid #F5170E;
 }
 
-.btn--color--wihte:hover{
+.btn--color--white:hover{
   background:  #F5170E;
   color: #fff;
+}
+
+.events{
+  display: flex;
+  flex-direction: column;
 }
 
 .events__title{
@@ -219,17 +221,18 @@ p{
 }
 
 .news{
+  display: flex;;
   margin-bottom: 53px;
 }
 
 .news__item{
-  width: 557px;
-  display: inline-block;
-  vertical-align: top;
-  position: relative;
-  border-radius: 5px;
-  overflow: hidden;
-  margin-right: 23px;
+ min-width: 557px;
+ display: inline-block;
+ vertical-align: top;
+ position: relative;
+ border-radius: 5px;
+ overflow: hidden;
+ margin-right: 23px;
 }
 
 .news__item:last-child{
@@ -254,7 +257,7 @@ p{
 
 .news__date{
   font-size: 14px;
-  margin-bottom: 12px;
+  margin-bottom: 20px;
 }
 
 .news__title{
@@ -263,7 +266,8 @@ p{
 }
 
 .paginator{
-  text-align: center;
+ text-align: center;
+ margin-bottom: 124px;
 }
 
 .paginator__display, .paginator__list{
@@ -295,40 +299,81 @@ p{
   line-height: 32px;
 }
 
-.about__cover{
-  display: inline-block;
-  vertical-align: top;
-  width: 490px;
-  height: 505px;
-  object-fit: cover;
-  border-radius: 5px;
+.footer-container{
+ border-top: 1px solid #fff;
+ border: top opacity 10%;
 }
 
-.about__cover-img{
-width: 100%;
-height: 100%;
+.footer{
+  display: flex;
+  height: 95px;
+  margin-bottom: 57px;
+  align-items:flex-end;
 }
 
-.about__desc{
-  display: inline-block;
-  vertical-align: top;
-  padding: 70px 81px;
-  width: 785px;
-  height: 455px;
-  border-radius: 5px;
+.socials{
+ display: flex;
+ margin-left: 274px;
 }
 
-.about__title{
-  position: absolute;
-  font-size: 36px;
-  font-weight: bold;
-  margin-bottom: 37px;
-  color: #000;
+.socials__item{
+  display: flex;
 }
 
-.abot__desc__text{
-color: #000;
-position: absolute;
-margin-bottom: 43px;
+.socials__item:not(:last-child){
+  margin-right: 10px;
+}
+
+.socials__link{
+  width: 36px;
+  height: 36px;
+  background: center center no-repeat;
+}
+
+.socials__item--icon--telegram .socials__link{
+  background-image: url(./image/telegram.png);
+}
+
+.socials__item--icon--telegram .socials__link:hover{
+  background-image: url(./image/t-h.png);
+}
+
+.socials__item--icon--vk .socials__link{
+  background-image: url(./image/vk.png);
+}
+
+.socials__item--icon--vk .socials__link:hover{
+  background-image: url(./image/vk-h.png);
+}
+
+.socials__item--icon--fb .socials__link{
+  background-image: url(./image/f.png);
+}
+
+.socials__item--icon--fb .socials__link:hover{
+  background-image: url(./image/f-h.png);
+}
+
+.socials__item--icon--insta .socials__link{
+  background-image: url(./image/in.png);
+}
+
+.socials__item--icon--insta .socials__link:hover{
+  background-image: url(./image/in-h.png);
+}
+
+.contacts__info{
+  margin-left: auto;
+}
+
+.info{
+  font-size: 11px;
+  color: #9A9A9A;
+  text-align: right;
+  font-style: normal;
+}
+
+.contacts__phone{
+  font-size: 26px;
 }
 
