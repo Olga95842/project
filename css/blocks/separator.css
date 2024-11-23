@@ -1,0 +1,22 @@
+.separator{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 363px;
+  background: url("../../image/para.png")right 35% bottom no-repeat, url(../../image/Rectangle.png) center center /  cover no-repeat; 
+}
+
+.separator__content{
+  max-width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.separator__title{
+  font-size: 48px;
+  font-weight: bold;
+  color: #fff;
+  line-height: 1.1;
+}

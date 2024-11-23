@@ -1,0 +1,22 @@
+.contacts__workhours{
+  display: flex;
+  flex-direction: column;
+}
+
+.contacts__phone{
+  font-size: 26px;
+  text-decoration: none;
+  font-style: normal;
+}
+
+.contacts__info{
+  margin-left: auto;
+}
+
+.info{
+  font-size: 11px;
+  color: #9A9A9A;
+  text-align: right;
+  font-style: normal;
+}
+
